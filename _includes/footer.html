@@ -6,7 +6,7 @@
 
         {% for contact in site.footer.contact %}
 
-        {% assign contact_icon_path = "/assets/img/icons/" | append: contact.name | downcase | append: ".png" |
+        {% assign contact_icon_path = "/assets/img/icons/" | append: contact.icon | downcase | append: ".png" |
         absolute_url %}
         <img src="{{ contact_icon_path }}" alt="{{ contact.name | downcase }}" />
         <a href="{{ contact.link }}" id="{{ contact.name | downcase }}-link">
@@ -49,7 +49,7 @@
       {% if site.footer.show_powered_by == true %}
       <div class="footer-col footer-col-3 powered-by">
         <p>
-          powered by <a href="https://github.com/eliottvincent/bay">Bay</a> | {{ 'now' | date: "%Y" }}
+          {{ 'now' | date: "%Y" }}
         </p>
       </div>
       {% endif %}
