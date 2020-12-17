@@ -11,10 +11,12 @@ google_analytics: "UA-121636368-3"
 
 header:
   pages:
-    - name: Home
+    - name: 首页
       slug: /
-    - name: Work
-    - name: Blog
+    - name: 作品
+      slug: /work
+    - name: 博客
+      slug: /blog
 
 footer:
   show_powered_by: true
