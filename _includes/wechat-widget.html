@@ -1,16 +1,17 @@
+  
 {% for contact in site.footer.contact %}
-{% if contact.icon == 'wechat' %}
-{% assign wechat_username = contact.value %}
-{% break %}
-{% endif %}
+  {% if contact.icon == 'WeChat' %}
+    {% assign wechat_username = contact.value %}
+    {% break %}
+  {% endif %}
 {% endfor %}
 
 {% if wechat_username %}
-<div id="wechat-widget">
-  <p>
-    微信号搜索 <strong>{{ wechat_username }}</strong>, 或者扫描二维码:
-  </p>
+  <div id="wechat-widget">
+    <p>
+      微信号搜索 <strong>{{ wechat_username }}</strong>, 或者扫描二维码:
+    </p>
 
-  <img src="{{ " /assets/img/wechat-qr-code.png" | absolute_url }}" alt="QR code" id="qr-code" />
-</div>
+    <img src="{{ "/assets/img/wechat-qr-code.png" | absolute_url }}" alt="QR code" id="qr-code" />
+  </div>
 {% endif %}
