@@ -22,11 +22,11 @@ footer:
   show_powered_by: true
   contact:
     - name: 邮箱
-      icon: email@2x
+      icon: email
       value: 936923775@qq.com
       link: mailto:yourmail@domain.com
     - name: 微信
-      icon: wechat@2x
+      icon: wechat
       value: Coder_73807
       link: "#"
   follow:
