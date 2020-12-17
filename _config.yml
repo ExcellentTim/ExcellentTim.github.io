@@ -11,13 +11,13 @@ google_analytics: "UA-121636368-3"
 
 header:
   pages:
-    - name: 首页
+    - name: Home
       slug: /
-    - name: 作品
-    - name: 博客
+    - name: Work
+    - name: Blog
 
 footer:
-  show_powered_by: false
+  show_powered_by: true
   联系:
     - name: 邮箱
       value: 936923775@qq.com
