@@ -20,14 +20,14 @@ header:
 
 footer:
   show_powered_by: true
-  联系:
+  contact:
     - name: 邮箱
       value: 936923775@qq.com
       link: mailto:yourmail@domain.com
     - name: 微信
       value: Coder_73807
       link: "#"
-  # follow:
+  follow:
   #   - name: Twitter
   #     link: http://twitter.com/YourTwitterUsername
   #     username: "@YourTwitterUsername"
