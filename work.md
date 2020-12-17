@@ -1,20 +1,20 @@
 ---
 layout: work
-title: Work
+title: 作品
 slug: /work
 items:
-  - title: My Interest 1
+  - title: 作品1
     image:
       src: /assets/img/work/water.png
       alt: water
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  - title: My Interest 2
+    description: 第一个作品描述.
+  - title: 作品2
     image:
       src: /assets/img/work/sand.png
       alt: sand
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    description: 第二个作品描述.
 ---
 
-This is an example of a "Work" page, displaying your work, your interests, your projects.
+前方高能，你可以肆意观看我的作品
 <br />
 <br />
