@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: blog
+title: 博客
 slug: /blog
 ---
 

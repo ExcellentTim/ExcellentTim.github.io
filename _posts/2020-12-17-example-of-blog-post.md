@@ -22,7 +22,7 @@ og_image: /assets/img/content/post-example/Banner.jpg
 2. [第2部分](#第2部分)
     * [2.1](#2.1)
     * [2.2](#2.2)
-3. [Footnotes](#footnotes)
+3. [附注](#附注)
 
 #### 第1部分
 第一部分就只有一句话
@@ -48,6 +48,6 @@ og_image: /assets/img/content/post-example/Banner.jpg
 <br />
 
 
-##### 注脚
+##### 附注
 
-[^1]: 感谢你的观看！
+感谢你的观看！
