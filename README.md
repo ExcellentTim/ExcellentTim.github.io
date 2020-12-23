@@ -96,7 +96,8 @@ Create (or edit) the `index.markdown` file and add the following:
 ---
 layout: home
 profile_picture:
-  src: /assets/img/profile-pic.jpg
+  src: https://maomingxuhuahua.oss-cn-beijing.aliyuncs.com/profile-pic.jpg
+  #/assets/img/profile-pic.jpg
   alt: website picture
 ---
 

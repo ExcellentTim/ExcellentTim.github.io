@@ -6,7 +6,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   首页的描述.
 baseurl: "/" # the subpath of the site
 url: "https://ExcellentTim.github.io" # the base hostname & protocol for the site
-og_image: /assets/img/profile-pic.jpg
+og_image: https://maomingxuhuahua.oss-cn-beijing.aliyuncs.com/profile-pic.jpg
+#/assets/img/profile-pic.jpg
 google_analytics: "UA-121636368-3"
 
 header:

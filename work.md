@@ -5,12 +5,14 @@ slug: /work
 items:
   - title: 作品1
     image:
-      src: /assets/img/work/water.png
+      src: https://maomingxuhuahua.oss-cn-beijing.aliyuncs.com/water.png
+      #/assets/img/work/water.png
       alt: water
     description: 一个傻白甜。
   - title: 作品2
     image:
-      src: /assets/img/work/sand.png
+      src: https://maomingxuhuahua.oss-cn-beijing.aliyuncs.com/sand.png
+      # /assets/img/work/sand.png
       alt: sand
     description: 一个憨黑冷。
 ---
