@@ -1,7 +1,9 @@
 ---
+layout: post
 title: css集锦
 renderNumberedHeading: true
 grammar_cjkRuby: true
+date:   2022-04-12 14:00:00
 ---
 
 
