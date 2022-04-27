@@ -8,7 +8,7 @@ date:   2022-04-21 12:00:00
 
 <h3>2022-04-21</h3>
 
-``` reasonml
+``` javascript
 type Person = {
   name: string,
   age: number
