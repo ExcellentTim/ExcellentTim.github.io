@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>代码计算器</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>设计稿设置</legend>
+      <label>宽：<input type="text" value="375" id="width" /></label><br />
+      <label>高：<input type="text" value="667" id="height" /></label><br />
+      <button id="setUI">确定</button>
+    </fieldset>
+    <fieldset>
+      <legend>源代码</legend>
+      <textarea autofocus name="origin_code" id="origin_code" cols="100" rows="10"></textarea><br />
+      <button id="trans">转换</button>
+      <label><input type="checkbox" checked id="autoCopy" />自动复制</label>
+    </fieldset>
+    <fieldset>
+      <legend>转换后代码</legend>
+      <textarea name="code" id="code" cols="100" rows="10"></textarea><br />
+      <button id="copy">复制</button>
+      <button id="reset">清空</button>
+    </fieldset>
+  </form>
+
+  <script>
+    function getId(id) {
+      return document.getElementById(id);
+    }
+    function getName(name) {
+      return document.getElementsByName(name)[0];
+    }
+    var widthIpt = getId("width");
+    var heightIpt = getId("height");
+    var setUIBtn = getId("setUI");
+
+    var origin_code_input = getName("origin_code");
+    var transBtn = getId("trans");
+    var autoCopyInput = getId("autoCopy");
+
+    var code_input = getName("code");
+    var copyBtn = getId("copy");
+    var reset = getId("reset");
+
+
+    var width, height;
+    function setUI() {
+      width = +widthIpt.value;
+      height = +heightIpt.value;
+    }
+    setUI();
+
+    setUIBtn.onclick = function (e) {
+      e.preventDefault();
+      setUI();
+    }
+
+    function copy(text) {
+      var textareaEl = document.createElement('textarea');
+      textareaEl.setAttribute('readonly', 'readonly'); // 防止手机上弹出软键盘
+      // input.setAttribute('value', text);
+      textareaEl.value = text;
+      document.body.appendChild(textareaEl);
+      // input.setSelectionRange(0, 9999);
+      textareaEl.select();
+      var res = document.execCommand('copy');
+      document.body.removeChild(textareaEl);
+      console.log("复制成功");
+      return res;
+    }
+
+    function trans(originCode) {
+      console.log(originCode);
+      var code;
+      var reg = /(\d+(\.\d+)?)px/gi;
+      code = originCode.replace(reg, function (px, num) {
+        // 100vw = width px   ->   1px = 100vw/width
+        // console.log(px, num);
+        return (num * 100 / width).toFixed(3) + "vw";
+      });
+
+      return code;
+    }
+
+    transBtn.onclick = function (e) {
+      e.preventDefault();
+      var res = trans(origin_code_input.value);
+      code_input.value = res;
+      if (autoCopy) {
+        copyAndReset(res);
+      }
+    }
+    origin_code_input.onkeypress = function (e) {
+      if (e.keyCode == 13) {
+        var res = trans(origin_code_input.value);
+        code_input.value = res;
+        console.log(autoCopy);
+        if (autoCopy) {
+          copyAndReset(res);
+        }
+      }
+    }
+
+    var autoCopy = autoCopyInput.checked;
+    autoCopyInput.onchange = function (e) {
+      autoCopy = autoCopyInput.checked;
+    }
+
+    function copyAndReset(code) {
+      copy(code);
+      origin_code_input.value = "";
+    }
+
+    copyBtn.onclick = function (e) {
+      e.preventDefault();
+      copyAndReset(code_input.value);
+    }
+
+    reset.onclick = function (e) {
+      e.preventDefault();
+      code_input.value = "";
+      origin_code_input.value = "";
+    }
+  </script>
+</body>
+
+</html>
